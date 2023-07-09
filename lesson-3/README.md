@@ -7,6 +7,8 @@ This quicker lesson extends the Lesson's 2 SimpleStorage contract to teach us fe
 - Contract inheritance
 - Overriding functions
 
+The original repository for this class can be found [here](https://github.com/cyfrin/remix-storage-factory-f23)
+
 My personal on chain development
 
 - Factory contract deployed on Sepolia
