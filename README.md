@@ -7,4 +7,5 @@ At the moment it was created, it can be available on Youtube for free:
 
 # Code by lessons
 
-- [Lesson 2](./lesson-2/README.md)
+- [Lesson 2 - Simple Storage](./lesson-2/README.md)
+- [Lesson 3 - Storage Factory](./lesson-3/README.md)

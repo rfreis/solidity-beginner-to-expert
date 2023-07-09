@@ -1,6 +1,6 @@
 # Lesson 2 - Welcome to Remix - Simple Storage
 
-This lesson teaches us to deploy our first smart contract - a simple data storage. It was pretty and simple way good to learn the main solidity data structures.
+This lesson teaches us to deploy our first smart contract - a simple data storage. It was pretty good and simple way to learn the main solidity data structures.
 
 The original repository for this class can be found [here](https://github.com/cyfrin/remix-simple-storage-f23)
 
@@ -25,4 +25,4 @@ For this class, I tried to do couple things more which weren't part of the class
 
 Running `SimpleStorage.sol` on [Remix](https://remix.ethereum.org) should be the most simple way.
 
-The python code would probably be better to run on a virtual environment installing the requirements on .txt file
+The python code would probably be better to run on a virtual environment installing the requirements on .txt file and setting the environment variables for Infura api credentials and the private key for signing the contract's transactions.
