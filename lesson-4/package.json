@@ -1,0 +1,14 @@
+{
+  "name": "lesson-4",
+  "version": "1.0.0",
+  "description": "This lesson teaches us how to deal with payable functions to receive ETH on a contract. Important topics from this lessons are:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chainlink/contracts": "^0.6.1"
+  }
+}

@@ -9,7 +9,7 @@ This quicker lesson extends the Lesson's 2 SimpleStorage contract to teach us fe
 
 The original repository for this class can be found [here](https://github.com/cyfrin/remix-storage-factory-f23)
 
-My personal on chain development
+## My personal on chain development
 
 - Factory contract deployed on Sepolia
 [0x0CA9249B341aeef7De960863EBf318ECF39428FD](https://sepolia.etherscan.io/address/0x0ca9249b341aeef7de960863ebf318ecf39428fd)

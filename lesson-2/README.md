@@ -4,7 +4,7 @@ This lesson teaches us to deploy our first smart contract - a simple data storag
 
 The original repository for this class can be found [here](https://github.com/cyfrin/remix-simple-storage-f23)
 
-My personal on chain deployment and transactions can be found right below:
+## My personal on chain deployment
 
 - Contract deployed on Sepolia:
 [0x62c338BD5aC1CedfC6e7b5A2287443F0e1817931](https://sepolia.etherscan.io/address/0x62c338bd5ac1cedfc6e7b5a2287443f0e1817931)
