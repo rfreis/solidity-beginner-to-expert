@@ -20,13 +20,8 @@ contract SimpleStorage {
     }
 
     function storeFavoritePerson(
-        string memory name,
-        uint256 _favoriteNumber
-    ) public {
-        Person memory newPerson = Person({
-            favoriteNumber: _favoriteNumber,
-            name: name
-        });
+        string memory name, uint256 _favoriteNumber) public {
+        Person memory newPerson = Person({favoriteNumber: _favoriteNumber, name: name});
         favoritePerson = newPerson;
     }
 
@@ -35,10 +30,7 @@ contract SimpleStorage {
     }
 
     function addPerson(string memory name, uint256 _favoriteNumber) public {
-        Person memory newPerson = Person({
-            favoriteNumber: _favoriteNumber,
-            name: name
-        });
+        Person memory newPerson = Person({favoriteNumber: _favoriteNumber, name: name});
         listOfPeople.push(newPerson);
         nameToFavoriteNumber[name] = _favoriteNumber;
     }
