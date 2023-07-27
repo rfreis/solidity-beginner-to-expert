@@ -19,8 +19,7 @@ contract SimpleStorage {
         myFavoriteNumber = _favoriteNumber;
     }
 
-    function storeFavoritePerson(
-        string memory name, uint256 _favoriteNumber) public {
+    function storeFavoritePerson(string memory name, uint256 _favoriteNumber) public {
         Person memory newPerson = Person({favoriteNumber: _favoriteNumber, name: name});
         favoritePerson = newPerson;
     }
