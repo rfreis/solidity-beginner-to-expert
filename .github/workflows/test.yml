@@ -1,6 +1,10 @@
 name: test
 
-on: workflow_dispatch
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 env:
   FOUNDRY_PROFILE: ci
@@ -22,13 +26,18 @@ jobs:
         with:
           version: nightly
 
+      - name: Style solidity
+        run: |
+          forge fmt --check ./lesson-6
+        id: build
+
       - name: Run Forge build
         run: |
           forge --version
-          forge build --sizes
+          forge build --sizes ./lesson-6
         id: build
 
       - name: Run Forge tests
         run: |
-          forge test -vvv
+          forge test -vvv ./lesson-6
         id: test
