@@ -29,7 +29,7 @@ jobs:
       - name: Style solidity
         run: |
           forge fmt --check ./lesson-6/src
-        id: build
+        id: style
 
       - name: Run Forge build
         run: |
