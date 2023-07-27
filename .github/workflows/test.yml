@@ -33,11 +33,13 @@ jobs:
 
       - name: Run Forge build
         run: |
+          cd lesson-6 
           forge --version
-          forge build --sizes ./lesson-6
+          forge build --sizes
         id: build
 
       - name: Run Forge tests
         run: |
-          forge test -vvv ./lesson-6
+          cd lesson-6 
+          forge test -vvv
         id: test
