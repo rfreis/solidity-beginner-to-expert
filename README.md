@@ -1,3 +1,8 @@
+![GitHub](https://img.shields.io/github/license/rfreis/solidity-beginner-to-expert)
+[![test_L6](https://github.com/rfreis/solidity-beginner-to-expert/actions/workflows/test_L6.yml/badge.svg)](https://github.com/rfreis/solidity-beginner-to-expert/actions/workflows/test_L6.yml)
+[![test_L7](https://github.com/rfreis/solidity-beginner-to-expert/actions/workflows/test_L7.yml/badge.svg)](https://github.com/rfreis/solidity-beginner-to-expert/actions/workflows/test_L7.yml)
+[![Coverage](https://img.shields.io/codecov/c/github/rfreis/solidity-beginner-to-expert/main.svg)](https://codecov.io/github/rfreis/solidity-beginner-to-expert?branch=main)
+
 # Introduction
 
 This repository was created to store code from [Learn Solidity, Blockchain Development, & Smart Contracts | Powered By AI - Full Course](https://github.com/Cyfrin/foundry-full-course-f23), by [Patrick Collins](https://github.com/PatrickAlphaC).
