@@ -4,3 +4,9 @@
 [submodule "lesson-7/lib/forge-std"]
 	path = lesson-7/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "lesson-7/lib/chainlink-brownie-contracts"]
+	path = lesson-7/lib/chainlink-brownie-contracts
+	url = https://github.com/smartcontractkit/chainlink-brownie-contracts
+[submodule "lesson-7/lib/foundry-devops"]
+	path = lesson-7/lib/foundry-devops
+	url = https://github.com/ChainAccelOrg/foundry-devops

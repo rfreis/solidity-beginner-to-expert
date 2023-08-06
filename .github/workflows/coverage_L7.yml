@@ -1,0 +1,36 @@
+name: Coverage
+
+on:
+  workflow_run:
+    workflows: [test_L7]
+    types:
+      - completed
+
+jobs:
+  coverage:
+
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: dawidd6/action-download-artifact@v2
+      with:
+        name: artifact
+        run_id: ${{ github.event.workflow_run.id }}
+        workflow: coverage.yaml
+    
+    - name: Extract artifact
+      run: tar -xvf artifact.tar
+    
+    - name: Prepare files and variables
+      run: cat pr.env >> $GITHUB_ENV
+
+    - name: Write a comment
+      uses: marocchino/sticky-pull-request-comment@v2
+      with:
+        number: ${{ env.PR_NUMBER }}
+        path: code-coverage-results.md
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        files: coverage.xml

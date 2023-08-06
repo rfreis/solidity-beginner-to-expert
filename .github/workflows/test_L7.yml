@@ -1,0 +1,81 @@
+name: test_L7
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  FOUNDRY_PROFILE: ci
+
+jobs:
+  check:
+    strategy:
+      fail-fast: true
+
+    name: Foundry project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: Style solidity
+        run: |
+          forge fmt --check ./lesson-7/src
+        id: style
+
+      - name: Run Forge build
+        run: |
+          cd lesson-7 
+          forge --version
+          forge build --sizes
+        id: build
+
+      - name: Run Forge tests
+        run: |
+          cd lesson-7 
+          forge test -vvv
+        id: test
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.8"
+
+      - name: Converts lcov to cobertura
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install lcov_cobertura
+          lcov_cobertura lcov.info -o coverage.xml
+
+      - name: Code Coverage Report
+        uses: irongut/CodeCoverageSummary@v1.3.0
+        with:
+          filename: coverage.xml
+          badge: true
+          fail_below_min: true
+          format: markdown
+          hide_branch_rate: false
+          hide_complexity: true
+          indicators: true
+          output: both
+          thresholds: '60 80'
+
+      - name: Prepare files and variables
+        run: |
+          cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+          echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> pr.env
+          tar -cvf artifact.tar coverage.xml code-coverage-results.md pr.env
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: artifact
+          path: artifact.tar
+          retention-days: 1
