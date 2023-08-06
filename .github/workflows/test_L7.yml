@@ -44,6 +44,11 @@ jobs:
           forge test -vvv
         id: test
 
+      - name: Run Forge tests
+        run: |
+          cd lesson-7 
+          forge coverage --report lcov
+
       - name: Set up Python 3.8
         uses: actions/setup-python@v3
         with:
