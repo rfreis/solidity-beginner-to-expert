@@ -18,3 +18,4 @@ At the moment it was created, it can be available on Youtube for free:
 - [Lesson 4 - Fund Me](./lesson-4/README.md)
 - [Lesson 6 - Foundry Simple Storage](./lesson-6/README.md)
 - [Lesson 7 - Foundry FundMe](./lesson-7/README.md)
+- [Lesson 8 - Html/Js Fund Me](./lesson-8/README.md)
